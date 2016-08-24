@@ -21,6 +21,7 @@
     ein
     flymake
     flymake-cursor
+    flycheck
     highlight-indentation
     ido-ubiquitous
     idomenu
@@ -31,6 +32,7 @@
     flymake-puppet
     puppet-mode
     matlab-mode
+    php-mode
   ) "a list of packages to ensure are installed at launch.")
 
 (defun required-packages-installed-p ()

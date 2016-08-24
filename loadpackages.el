@@ -13,13 +13,16 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
+(global-flycheck-mode)
+
 ; C-; for sublime multi-cursor-edit
 (require 'iedit)
 
-; Elpy - Python in Emaacs
+; Elpy - Python in Emacs
 ; requires pip install elpy rope
 (elpy-enable)
-(setq elpy-default-minor-modes '(eldoc-mode flymake-mode yas-minor-mode auto-complete-mode)) ; I don't like highlight-indentation-mode
+(setq-default elpy-modules
+  (remove 'elpy-module-highlight-indentation elpy-modules))
 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -28,9 +31,10 @@
 ; requires pip install autopep8
 (require 'py-autopep8)
 (setq py-autopep8-options '("--max-line-length=79")) ; <- Does not seem to work
+; Use C-c p to apply pep8 formatting automatically
 (add-hook 'python-mode-hook
   (lambda() 
-    (local-set-key  (kbd "C-c p") 'py-autopep8))) ; Use C-c p to apply pep8 formatting automatically
+    (local-set-key  (kbd "C-c p") 'py-autopep8))) 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;enable pep8
@@ -114,12 +118,16 @@
 (require 'flymake-puppet)
 (add-hook 'puppet-mode-hook 'flymake-puppet-load)
 
+(require 'php-mode)
+(add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
+
 ;; ---------------------------------------
-;; load elscreen
+;; load elscreen (tabs)
 ;; requires apt-get install elscreen
 ;; ---------------------------------------
 (load "elscreen" "ElScreen" t)
 
+; matlab
 (autoload 'matlab-mode "matlab" "Matlab Editing Mode" t)
 (add-to-list
  'auto-mode-alist
@@ -127,6 +135,7 @@
 (setq matlab-indent-function t)
 (setq matlab-shell-command "matlab")
 
+; Dockerfile
 (add-to-list 'load-path "~/.emacs.d/mysetup/dockerfile-mode/")
 (require 'dockerfile-mode)
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
