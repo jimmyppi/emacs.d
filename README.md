@@ -4,6 +4,7 @@ Features
 ========
 
 * Clean environment without menus etc.
+* Store backup files in ```~/.emacs_backups``` instead of all over the place.
 * Tabs with elscreen.
 * Syntax and lint checking with flycheck.
 * Python pep8 checks.
