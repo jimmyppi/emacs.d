@@ -1,6 +1,7 @@
 *
 !init.el
 !mysetup/
+!external/
 !README.md
 !.gitignore
 !.gitmodules
