@@ -1,0 +1,3 @@
+[submodule "external/dockerfile-mode"]
+    path = external/dockerfile-mode
+    url = https://github.com/spotify/dockerfile-mode.git

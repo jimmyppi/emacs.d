@@ -1,6 +1,3 @@
-; install packages
-(load "~/.emacs.d/mysetup/packages.el")
-
 ; Theming
 (load-theme 'base16-solarized-dark t)
 
@@ -136,6 +133,6 @@
 (setq matlab-shell-command "matlab")
 
 ; Dockerfile
-(add-to-list 'load-path "~/.emacs.d/mysetup/dockerfile-mode/")
+(add-to-list 'load-path "~/.emacs.d/external/dockerfile-mode/")
 (require 'dockerfile-mode)
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
