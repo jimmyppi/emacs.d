@@ -33,6 +33,7 @@
     puppet-mode
     matlab-mode
     php-mode
+    markdown-mode
   ) "a list of packages to ensure are installed at launch.")
 
 (defun required-packages-installed-p ()
