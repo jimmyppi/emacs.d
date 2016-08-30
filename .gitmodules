@@ -1,3 +1,6 @@
 [submodule "external/dockerfile-mode"]
 	path = external/dockerfile-mode
 	url = https://github.com/spotify/dockerfile-mode.git
+[submodule "external/yaml-mode"]
+	path = external/yaml-mode
+	url = https://github.com/yoshiki/yaml-mode
