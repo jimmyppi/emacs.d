@@ -12,3 +12,13 @@
 (setq inhibit-startup-message t)
 (show-paren-mode 1)
 (setq frame-title-format (list "%b - " invocation-name))
+
+; Set max vertical size, keep horizontal size to 80 characters
+(defun toggle-fullscreen ()
+  (interactive)
+  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+                         '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
+;  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+;                         '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
+)
+(toggle-fullscreen)
