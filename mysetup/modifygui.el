@@ -13,6 +13,8 @@
 (show-paren-mode 1)
 (setq frame-title-format (list "%b - " invocation-name))
 
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 ; Set max vertical size, keep horizontal size to 80 characters
 (defun toggle-fullscreen ()
   (interactive)
