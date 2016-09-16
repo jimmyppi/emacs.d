@@ -7,6 +7,9 @@
 (setq ido-everywhere t)
 (ido-mode 1)
 
+; Faster than the default scp
+(setq tramp-default-method "ssh")
+
 (require 'auto-complete-config)
 (ac-config-default)
 
