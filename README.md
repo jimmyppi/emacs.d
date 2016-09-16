@@ -9,7 +9,7 @@ Features
 * Syntax and lint checking with flycheck.
 * Python pep8 checks.
 * Autocomplete.
-* Syntax highlighting for Python, Dockerfiles, php, matlab, Puppet, Bash.
+* Syntax highlighting for Python, Dockerfiles, php, matlab, Puppet, Bash, Yaml.
 * [Markdown mode](http://jblevins.org/projects/markdown-mode/)
 
 Setup

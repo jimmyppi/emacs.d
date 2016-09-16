@@ -15,21 +15,17 @@
 ; variables, not create them.
 (defvar required-packages
   '(
+    base16-theme
     helm
-    elpy
     auto-complete
     ein
-    flymake
-    flymake-cursor
-    flycheck
     highlight-indentation
     ido-ubiquitous
     idomenu
     iedit
-    base16-theme
+    flycheck
     py-autopep8
-    flymake-easy
-    flymake-puppet
+    elpy
     puppet-mode
     matlab-mode
     php-mode

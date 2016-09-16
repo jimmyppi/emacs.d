@@ -33,35 +33,6 @@
   (lambda() 
     (local-set-key  (kbd "C-c p") 'py-autopep8))) 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;enable pep8
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; To enable pep8 check
-;; install pep8 checker with one of those commands
-;; sudo apt-get install pep8
-;; or
-;; sudo pip install pep8
-
-(when (load "flymake" t)
- (defun flymake-pylint-init ()
-   (let* ((temp-file (flymake-init-create-temp-buffer-copy
-                      'flymake-create-temp-inplace))
-          (local-file (file-relative-name
-                       temp-file
-                       (file-name-directory buffer-file-name))))
-         (list "pep8" (list "--repeat" local-file))))
-
- (add-to-list 'flymake-allowed-file-name-masks
-              '("\\.py\\'" flymake-pylint-init)))
-
-(defun my-flymake-show-help ()
-  (when (get-char-property (point) 'flymake-overlay)
-    (let ((help (get-char-property (point) 'help-echo)))
-      (if help (message "%s" help)))))
-
-(add-hook 'post-command-hook 'my-flymake-show-help)
-
-
 ;;;; rst mode for python doc strings
 ;(require 'mmm-mode)
 ;(setq mmm-global-mode 'maybe)
@@ -75,24 +46,10 @@
 ;    :end-not-begin t)))
 ;(mmm-add-mode-ext-class 'python-mode nil 'python-rst)
 
-
 ; IPython Notebook - M-x ein:<tab> for commands
 ; Requires a notebook server (run "ipython notebook")
 (require 'ein) 
 (setq ein:use-auto-complete t)
-
-(require 'flymake-cursor) ; See flymake messages for cursor position
-(global-set-key [f10] 'flymake-goto-prev-error)
-(global-set-key [f11] 'flymake-goto-next-error)
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(flymake-errline ((((class color)) (:underline "red"))))
- '(flymake-warnline ((((class color)) (:underline "yellow")))))
-
 
 ;C/C++ convenience
 ;(add-hook 'c-mode-common-hook
@@ -112,8 +69,6 @@
 ; Start puppet-mode when editing a .pp file
 (autoload 'puppet-mode "puppet-mode" "Major mode for editing puppet manifests")
 (add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
-(require 'flymake-puppet)
-(add-hook 'puppet-mode-hook 'flymake-puppet-load)
 
 (require 'php-mode)
 (add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
