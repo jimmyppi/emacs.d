@@ -18,7 +18,7 @@
     base16-theme
     helm
     auto-complete
-    ein
+    magit
     highlight-indentation
     ido-ubiquitous
     idomenu
@@ -26,6 +26,7 @@
     flycheck
     py-autopep8
     elpy
+    ein
     mmm-mode
     puppet-mode
     matlab-mode
