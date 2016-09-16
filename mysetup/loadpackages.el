@@ -34,17 +34,17 @@
     (local-set-key  (kbd "C-c p") 'py-autopep8))) 
 
 ;;;; rst mode for python doc strings
-;(require 'mmm-mode)
-;(setq mmm-global-mode 'maybe)
-;(mmm-add-classes
-; '((python-rst
-;    :submode rst-mode
-;    :front "^ *[ru]?\"\"\"[^\"]*$"
-;    :back "^ *\"\"\""
-;    :include-front t
-;    :include-back t
-;    :end-not-begin t)))
-;(mmm-add-mode-ext-class 'python-mode nil 'python-rst)
+(require 'mmm-mode)
+(setq mmm-global-mode 'maybe)
+(mmm-add-classes
+ '((python-rst
+    :submode rst-mode
+    :front "^ *[ru]?\"\"\"[^\"]*$"
+    :back "^ *\"\"\""
+    :include-front t
+    :include-back t
+    :end-not-begin t)))
+(mmm-add-mode-ext-class 'python-mode nil 'python-rst)
 
 ; IPython Notebook - M-x ein:<tab> for commands
 ; Requires a notebook server (run "ipython notebook")

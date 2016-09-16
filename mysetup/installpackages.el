@@ -26,6 +26,7 @@
     flycheck
     py-autopep8
     elpy
+    mmm-mode
     puppet-mode
     matlab-mode
     php-mode
