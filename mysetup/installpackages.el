@@ -8,7 +8,7 @@
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (package-initialize)
-
+(setq url-http-attempt-keepalives nil)
 
 ; defvar is the correct way to declare global variables
 ; you might see setq as well, but setq is supposed to be use just to set
@@ -50,4 +50,13 @@
     (when (not (package-installed-p p))
       (package-install p))))
 
-; todo: uninstall packages that aren't in the required list?
+(defun package-list-unaccounted-packages ()
+  "Like `package-list-packages', but shows only the packages that
+  are installed and are not in `required-packages'.  Useful for
+  cleaning out unwanted packages."
+  (interactive)
+  (package-show-package-list
+   (remove-if-not (lambda (x) (and (not (memq x required-packages))
+                            (not (package-built-in-p x))
+                            (package-installed-p x)))
+                  (mapcar 'car package-archive-contents))))

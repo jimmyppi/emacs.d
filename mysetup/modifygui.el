@@ -5,9 +5,6 @@
 (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 ;(when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
-; todo: what does this do?
-(setq url-http-attempt-keepalives nil)
-
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
 (show-paren-mode 1)
