@@ -21,7 +21,6 @@
 (require 'iedit)
 
 ; Elpy - Python in Emacs
-; requires pip install elpy rope
 (elpy-enable)
 (setq-default elpy-modules
   (remove 'elpy-module-highlight-indentation elpy-modules))
@@ -56,21 +55,6 @@
 (require 'ein) 
 (setq ein:use-auto-complete t)
 
-;C/C++ convenience
-;(add-hook 'c-mode-common-hook
-;  (lambda() 
-;    (local-set-key  (kbd "C-c o") 'ff-find-other-file)))
-;
-;(add-hook 'c-mode-common-hook
-;  (lambda() 
-;    (local-set-key  (kbd "C-c C-c") 'recompile)))
-;
-;(setq compile-command "scons")
-
-
-; Tramp
-(setq tramp-default-method "ssh")
-
 ; Start puppet-mode when editing a .pp file
 (autoload 'puppet-mode "puppet-mode" "Major mode for editing puppet manifests")
 (add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
@@ -97,6 +81,7 @@
 (require 'dockerfile-mode)
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
+; yaml
 (add-to-list 'load-path "~/.emacs.d/external/yaml-mode/")
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
