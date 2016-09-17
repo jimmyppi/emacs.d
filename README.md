@@ -6,10 +6,10 @@ My emacs config.
 * Start with max vertical size and 80 characters horizontal size.
 * Store backup files in `~/.emacs.d/backups` instead of all over the place.
 * Tabs with elscreen.
-  * `C-c c` - Create new tab.
-  * `C-c d` - Delete tab.
-  * `C-c n` - Switch tab right.
-  * `C-c m` - Switch tab left.
+    * `C-c c` - Create new tab.
+    * `C-c d` - Delete tab.
+    * `C-c n` - Switch tab right.
+    * `C-c m` - Switch tab left.
 * Syntax highlighting for Python, Dockerfile, php, matlab, Puppet, Bash, Yaml, markdown.
 * Syntax highlighting of rst in python docstrings.
 * Autocompletion when coding and searching for files.
