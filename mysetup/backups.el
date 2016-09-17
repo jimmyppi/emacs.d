@@ -7,4 +7,4 @@
 (setq version-control t)
 
 ;; Save all backup file in this directory.
-(setq backup-directory-alist (quote ((".*" . "~/.emacs_backups/"))))
+(setq backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
