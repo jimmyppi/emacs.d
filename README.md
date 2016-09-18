@@ -18,7 +18,7 @@ Requires emacs 24.
 * Auto pairing of () [] {} etc.
 * Inline syntax checking and linting with
   [flycheck](http://www.flycheck.org/en/latest/).
-  See also [External resources](#External resources) below.
+  See also [External resources](#external-resources) below.
 * Python development environment with
   [elpy](https://elpy.readthedocs.io/en/latest/index.html).
 * Syntax highlighting of rst in python docstrings.
