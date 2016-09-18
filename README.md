@@ -1,5 +1,7 @@
 My emacs config.
 
+Requires emacs 24.
+
 # Features
 
 * Clean environment without menus etc.
@@ -10,12 +12,17 @@ My emacs config.
     * `C-c d` - Delete tab.
     * `C-c n` - Switch tab right.
     * `C-c m` - Switch tab left.
-* Syntax highlighting for Python, Dockerfile, php, matlab, Puppet, Bash, Yaml, markdown.
-* Syntax highlighting of rst in python docstrings.
+* Syntax highlighting that are not built in for Dockerfile, php, matlab,
+  Puppet, Yaml, markdown.
 * Autocompletion when coding and searching for files.
 * Auto pairing of () [] {} etc.
-* Inline syntax checking and linting with [flycheck](http://www.flycheck.org/en/latest/).
-* [Markdown mode](http://jblevins.org/projects/markdown-mode/)
+* Inline syntax checking and linting with
+  [flycheck](http://www.flycheck.org/en/latest/).
+  See also [External resources](#External resources) below.
+* Python development environment with
+  [elpy](https://elpy.readthedocs.io/en/latest/index.html).
+* Syntax highlighting of rst in python docstrings.
+* [Markdown mode](http://jblevins.org/projects/markdown-mode/).
 * Git binding with [magit](https://magit.vc/).
 
 # Setup
@@ -40,9 +47,14 @@ of minutes.
 
 # External resources
 
-The tab functionality needs elscreen. Syntax checking and linting are done
-by using external tools that need to be installed. See this page for more
-languages: [http://www.flycheck.org/en/latest/languages.html#flycheck-languages](http://www.flycheck.org/en/latest/languages.html#flycheck-languages)
+The tab functionality needs elscreen.
+
+Elpy uses a lot of packages.
+
+Syntax checking and linting are done by using external tools that need to
+be installed. Below lists resources for shell/bash, html, css, javascript,
+php, latex, yaml, puppet, markdown, python.
+See this page for more languages: [http://www.flycheck.org/en/latest/languages.html#flycheck-languages](http://www.flycheck.org/en/latest/languages.html#flycheck-languages).
 
 ## apt-get install
 
