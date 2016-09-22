@@ -4,3 +4,6 @@
 [submodule "external/yaml-mode"]
 	path = external/yaml-mode
 	url = https://github.com/yoshiki/yaml-mode
+[submodule "external/python-docstring-mode"]
+	path = external/python-docstring-mode
+	url = https://github.com/glyph/python-docstring-mode

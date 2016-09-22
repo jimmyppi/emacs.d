@@ -50,6 +50,10 @@
     :end-not-begin t)))
 (mmm-add-mode-ext-class 'python-mode nil 'python-rst)
 
+;(add-to-list 'load-path "~/.emacs.d/external/python-docstring-mode")
+;(require 'python-docstring)
+;(add-hook 'python-mode-hook (lambda () (python-docstring-mode t)))
+
 ; IPython Notebook - M-x ein:<tab> for commands
 ; Requires a notebook server (run "ipython notebook")
 (require 'ein) 
