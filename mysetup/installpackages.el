@@ -32,6 +32,9 @@
     matlab-mode
     php-mode
     markdown-mode
+    kotlin-mode
+    flycheck-kotlin
+    groovy-mode
   ) "a list of packages to ensure are installed at launch.")
 
 (defun required-packages-installed-p ()

@@ -63,8 +63,11 @@
 (autoload 'puppet-mode "puppet-mode" "Major mode for editing puppet manifests")
 (add-to-list 'auto-mode-alist '("\\.pp$" . puppet-mode))
 
-(require 'php-mode)
-(add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
+;(require 'php-mode)
+;(add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
+
+(require 'flycheck-kotlin)
+(flycheck-kotlin-setup)
 
 ;; ---------------------------------------
 ;; load elscreen (tabs)
@@ -97,3 +100,7 @@
 (add-hook 'yaml-mode-hook
  '(lambda ()
    (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
+; gradle
+(require 'groovy-mode)
+(add-to-list 'auto-mode-alist '("\\.gradle\\'" . groovy-mode))
