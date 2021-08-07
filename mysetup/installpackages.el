@@ -20,17 +20,15 @@
     auto-complete
     magit
     highlight-indentation
-    ido-ubiquitous
+    ido-completing-read+
     idomenu
     iedit
     flycheck
     py-autopep8
+    auto-virtualenv
     elpy
-    ein
+    use-package
     mmm-mode
-    puppet-mode
-    matlab-mode
-    php-mode
     markdown-mode
     kotlin-mode
     flycheck-kotlin

@@ -1,6 +1,6 @@
 My emacs config.
 
-Requires emacs 24.
+Requires emacs >= 24.
 
 # Features
 
@@ -12,8 +12,7 @@ Requires emacs 24.
     * `C-c d` - Delete tab.
     * `C-c n` - Switch tab right.
     * `C-c m` - Switch tab left.
-* Syntax highlighting that are not built in for Dockerfile, php, matlab,
-  Puppet, Yaml, markdown.
+* Syntax highlighting that are not built in for Dockerfile, Yaml, markdown, Kotlin, Gradle.
 * Autocompletion when coding and searching for files.
 * Auto pairing of () [] {} etc.
 * Inline syntax checking and linting with
@@ -23,6 +22,8 @@ Requires emacs 24.
   [elpy](https://elpy.readthedocs.io/en/latest/index.html).
 * Syntax highlighting of rst in python docstrings.
 * [Markdown mode](http://jblevins.org/projects/markdown-mode/).
+* Gradle and kotlin mode.
+* Yaml mode.
 * Git binding with [magit](https://magit.vc/).
 
 # Setup
@@ -31,7 +32,7 @@ This repo is prepared to live side by side with the other files in your
 `emacs.d` directory and should be cloned inside that directory:
 
     # Remove everything if you want a fresh setup
-    >> rm -rf ~/emacs.d/*
+    >> rm -rf ~/.emacs.d/*
     >> cd ~/.emacs.d
     >> git clone --recursive git@github.com:/jimmyppi/emacs.d .
 
@@ -53,43 +54,56 @@ Elpy uses a lot of packages.
 
 Syntax checking and linting are done by using external tools that need to
 be installed. Below lists resources for shell/bash, html, css, javascript,
-php, latex, yaml, puppet, markdown, python.
+latex, yaml, markdown, python.
 See this page for more languages: [http://www.flycheck.org/en/latest/languages.html#flycheck-languages](http://www.flycheck.org/en/latest/languages.html#flycheck-languages).
 
-## apt-get install
+## apt install
 
-* elscreen
-* shellcheck
-* tidy
-* phpmd
-* chktex
-* markdown
+* elscreen (tabs)
+* shellcheck (check bash script)
+* tidy (check html/xml syntax)
+* phpmd (php linter)
+* chktex (check Tex/Latex style)
+* markdown (Text-to-HTML conversion tool, is this needed?)
+* jq (check json)
 
-## pip install
+## python3 -m pip install --user (install pip: apt install python3-pip)
 
+Install elpy in the system python environment:
+
+* elpy
+
+## pipx install (install pipx: python3 -m pip install --user pipx)
+
+Install these apps in their own isolated environments with pipx:
+
+* flake8
+* mypy
+
+## Elpy RPC virtual env (installed by elpy in a separate virtualenv)
+
+These packages will be installed in the dedicated rpc virtualenv the first time
+elpy is activated:
+
+* jedi
 * yapf
 * autopep8
-* jedi
-* rope
-* importmagic
-* elpy
-* flake8
+* black
 
-## npm install -g
+## npm install -g (snap install node --classic)
 
 * csslint
 * jshint
-* jscs
+* eslint
 * js-yaml
 
-## gem install
+## gem install (apt install ruby-rubygems)
 
-* mdl
-* puppet-lint
+* mdl (check markdown syntax)
 
-## pear install
+## other
 
-* PHP_CodeSniffer
+* ktlint - https://github.com/pinterest/ktlint#installation
 
 # Learning emacs
 
@@ -99,7 +113,7 @@ See this page for more languages: [http://www.flycheck.org/en/latest/languages.h
 
 # TODO
 
-* elpy and autocomplete/flycheck should not be active at the same time.
+* auto activation of python virtualenv (did not get it to work with auto-virtualenv and pyenv-mode).
 * web mode
 * nginx mode
 * smex (search/history of emacs commands)
